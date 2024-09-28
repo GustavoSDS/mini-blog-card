@@ -7,6 +7,7 @@ $white: #fff
 $black: #20293A
 $gray: #6C727F
 $gray-light: #FAFAF9
+$box-shadow-card: 0px 10px 20px 0px rgba(17, 23, 41, 0.06)
 $font-family: 'Sora', sans-serif
 $font-title: 1.125rem
 $font-body: .875rem
@@ -43,11 +44,11 @@ main
     gap: 1rem
     background-color: $white
     width: 336px
-    padding: 16px 16px 20px
     border-radius: 10px
-    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05)
+    box-shadow: $box-shadow-card
 
     &__header
+        padding: 16px 16px 0
         width: 100%
         display: flex
         flex-direction: column
@@ -66,6 +67,7 @@ main
         font-size: $font-tag
         border-radius: 20px
     &__content
+        padding: 0 16px
         width: 100%
         display: flex
         flex-direction: column
@@ -77,16 +79,21 @@ main
             font-size: $font-body
             letter-spacing: -.5px
             color: $gray
-
+    hr
+        width: 100%
+        border: none
+        border-top: 1px solid $winter-mist
     &__footer
+        padding: 0px 16px 20px
         width: 100%
     &__author
         font-size: $font-small
         color: $gray
         font-style: normal
+        font-weight: 500
 
 @media (min-width: 768px)
     body
         justify-content: flex-start
-    main 
+    main
         margin: 164px auto 0
